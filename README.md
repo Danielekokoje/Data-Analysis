@@ -1,7 +1,7 @@
 # Premier League Champions Dashboard (1992-2023)
 
 <p align="center">
-  <img src="./assets/screenshots/dashboard.png" alt="Dashboard Overview" width="800"/>
+  <img src="./assets/screenshots/dashboard overview.png" alt="Dashboard Overview" width="800"/>
 </p>
 
 ## Project Overview
