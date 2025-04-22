@@ -1,6 +1,8 @@
 # Premier League Champions Dashboard (1992-2023)
 
-![Dashboard Overview](assets/screenshots/dashboard-overview.png)
+<p align="center">
+  <img src="./assets/screenshots/dashboard.png" alt="Dashboard Overview" width="800"/>
+</p>
 
 ## Project Overview
 A comprehensive Power BI dashboard analyzing English Premier League champions from the league's inception in 1992 through 2023. This interactive visualization explores championship patterns, points trends, and managerial achievements across three decades of Premier League history.
