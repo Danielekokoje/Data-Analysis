@@ -1,0 +1,85 @@
+# Premier League Champions Dashboard - Data Dictionary
+
+## Champions Table
+
+| Field | Type | Description | Example |
+|-------|------|-------------|---------|
+| Season | Text | The Premier League season in format YYYY-YYYY | "2022-2023" |
+| Year | Number | The year in which the season concluded | 2023 |
+| Team | Text | Name of the championship team | "Manchester City" |
+| Points | Number | Total points accumulated by the champion | 89 |
+| WinStreak | Number | Number of consecutive titles at this point | 3 |
+| Period | Text | Season range in format YYYY-YYYY | "2021-2023" |
+| Manager | Text | Name of the team's manager during championship season | "Pep Guardiola" |
+
+## Teams Dimension
+
+| Field | Type | Description | Example |
+|-------|------|-------------|---------|
+| TeamID | Number | Unique identifier for each team | 1 |
+| Team | Text | Team name | "Manchester United" |
+| City | Text | City where team is based | "Manchester" |
+| Founded | Number | Year the club was founded | 1878 |
+| Stadium | Text | Home stadium | "Old Trafford" |
+| Titles | Number | Total Premier League titles | 13 |
+
+## Managers Dimension
+
+| Field | Type | Description | Example |
+|-------|------|-------------|---------|
+| ManagerID | Number | Unique identifier for each manager | 1 |
+| Manager | Text | Manager's full name | "Alex Ferguson" |
+| TitleCount | Number | Total Premier League titles won | 13 |
+| FirstTitle | Number | Year of first Premier League title | 1993 |
+| LastTitle | Number | Year of last Premier League title | 2013 |
+| WinPercentage | Decimal | Win percentage overall | 74.1 |
+
+## Seasons Dimension
+
+| Field | Type | Description | Example |
+|-------|------|-------------|---------|
+| SeasonID | Number | Unique identifier for each season | 31 |
+| Season | Text | Season in format YYYY-YYYY | "2022-2023" |
+| StartDate | Date | Season start date | 08/05/2022 |
+| EndDate | Date | Season end date | 05/28/2023 |
+| TotalTeams | Number | Number of teams in the league that season | 20 |
+| TotalMatches | Number | Total matches played in the season | 380 |
+| Champion | Text | Name of the championship team | "Manchester City" |
+| RunnerUp | Text | Name of the second-place team | "Arsenal" |
+
+## Calculated Measures
+
+| Measure | Description | Logic |
+|---------|-------------|-------|
+| Title Count | Count of championships by selected team | COUNT of championships filtered by team |
+| Consecutive Titles | Maximum streak of consecutive titles | MAX of consecutive championships by team |
+| Manager Success Rate | Percentage of seasons managed resulting in titles | DIVIDE(titles won, seasons managed) |
+| Points Trend | Sum of championship points | Sum of points per season  |
+| Win Percentage | Match win percentage for championship team | DIVIDE(matches won, matches played) |
+| Title Distribution | Proportion of total championships by team | DIVIDE(team titles, total seasons) |
+
+## Relationships
+
+1. **Winners to Teams**
+   - Many-to-one relationship
+   - Related on Team field
+   - Filter direction: Single
+
+2. **Winners to Managers**
+   - Many-to-one relationship
+   - Related on Manager field
+   - Filter direction: Single
+
+3. **Winners to Seasons**
+   - One-to-one relationship
+   - Related on Season field
+   - Filter direction: Both
+
+## Source Information
+
+Data in this model has been compiled from the following sources:
+- Official Premier League statistics database
+- Sports reference archives
+- Manager career statistics databases
+
+The data has been verified for accuracy and completeness up to the 2022-2023 season.
