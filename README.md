@@ -69,4 +69,4 @@ Analysis of championship-winning points over time, showing the increasing compet
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
-If you have any questions or feedback, feel free to connect with me on [LinkedIn](#) or [GitHub](#).
+If you have any questions or feedback, feel free to connect with me on https://linkedin.com/in/daniel-ekokoje-099576301(#) or [GitHub](#).
